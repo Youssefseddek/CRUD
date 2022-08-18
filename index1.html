@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        
+        <div class="container py-5 ">
+
+            <div class="my-5">
+
+                <div class="mb-3">
+                    <label for="ProductName">Product Name</label>
+                    <input type="text" value="" class="form-control" name="" id="ProductName" onblur="  validname ()">
+
+                    <div class="alert alert-danger" id="alertname">
+                        <p>please etner valid name start with 1 uppercase char</p>
+                    </div>
+
+                </div>
+                <div class="mb-3">
+                    <label for="ProductPrice">Product Price</label>
+                    <input type="text" class="form-control" name="" id="ProductPrice" onblur="validprice()">
+
+                    <div class="alert alert-danger" id="alertprice">
+                        <p>please etner valid price </p>
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+                    <label for="ProductCategory">Product Category</label>
+                    <select class="form-control" id="ProductCategory">
+                        <option value="tv">tv</option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="Labtop">Labtop</option>
+                    </select>
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="Productdescription">Product description</label>
+                    <textarea type="text" class="form-control" name="" id="Productdescription" >
+                    </textarea>
+                </div>
+                
+
+            </div>
+
+
+            <button class="btn btn-outline-primary " onclick="addproduct()" id="addbtn">Add Product</button>
+            <button class="btn btn-outline-primary " onclick="addEdit()" id="editbtn">Add Edit</button>
+            <button class="btn btn-outline-danger " onclick="clearform()">Clear Form</button>
+
+        </div>          
+                                                                            <!-- onkeyup
+                                                                                onkeydown
+                                                                                onkeypress   -->
+        <input type="text" id="search" class="form-control mx-auto w-50" onkeyup="search()" placeholder="Search...">
+
+
+        <table class="table table-striped w-75 mx-auto my-4 ">
+            <thead>
+                <th>index</th>
+                <th>ProductName</th>
+                <th>ProductPrice</th>
+                <th>ProductCategory</th>
+                <th>Productdescription</th>
+                <th>Update</th>
+                <th>delete</th>
+            </thead>
+
+            <tbody id="myData">
+                <!-- <tr>
+                    <td>0</td>
+                    <td>nokia</td>
+                    <td>5000</td>
+                    <td>mobile</td>
+                    <td>Lorem ipsum dolor sit.</td>
+                    <td><button class="btn btn-outline-primary">Update</button></td>
+                    <td><button class="btn btn-outline-danger">delete</button></td>
+                </tr> -->
+              
+            </tbody>
+        </table>
+
+
+
+        <script src="main1.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
